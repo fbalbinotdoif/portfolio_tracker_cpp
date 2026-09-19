@@ -1,5 +1,6 @@
 #include "date.hpp"
 #include <iostream>
+#include "trade_side.hpp"
 
 int main() {
     portfolio::Date d1{10, 2, 2025};
@@ -9,5 +10,8 @@ int main() {
     bool comparasion = d1 < d2;
     std::cout << "Comparasion to D1 and D2: " << comparasion << "\n";
 
+    portfolio::TradeSide side = portfolio::TradeSide::BUY;
+    std::cout << portfolio::to_string(side) << "\n";
+    
     return 0;
 }
